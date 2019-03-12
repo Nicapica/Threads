@@ -10,6 +10,11 @@ namespace Threads
     {
         static void Main(string[] args)
         {
+            int DartsNeeded = 0;
+            int DartsThrown = 0;
+            Random random = new Random();
+            int randomnumber = random.Next();
+
         }
     }
 }
