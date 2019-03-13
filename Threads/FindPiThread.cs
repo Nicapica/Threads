@@ -8,5 +8,19 @@ namespace Threads
 {
     class FindPiThread
     {
+        int DartsNeeded = 0;
+        int DartsThrown { get; }
+        Random newRandom;
+
+        public FindPiThread(int dartsneeded)
+        {
+            DartsNeeded = dartsneeded;
+            
+        }
+
+        public void ThrowDarts()
+        {
+
+        }
     }
 }
