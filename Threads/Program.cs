@@ -23,6 +23,7 @@ namespace Threads
             {
                 fpiThread.Add();
                 thread.Add();
+                thread.Start();
                 Thread.Sleep(16);
             }
 
