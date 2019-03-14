@@ -22,18 +22,18 @@ namespace Threads
             foreach()
             {
                 fpiThread.Add();
-                thread.Add();
-                thread.Start();
+                thread.Add(myThread);
+                myThread.Start();
                 Thread.Sleep(16);
             }
 
-            foreach(int item in fpiThread)
+            foreach(FindPiThread item in fpiThread)
             {
                 Console.WriteLine(item);
                 item.Join();
             }
 
-            foreach(int item in thread)
+            foreach(Thread item in thread)
             {
                 Console.WriteLine(item);
             }
