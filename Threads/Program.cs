@@ -29,7 +29,8 @@ namespace Threads
 
             foreach(FindPiThread item in fpiThread)
             {
-                Console.WriteLine(item);
+                int inside = item.DartsInside;
+                Console.WriteLine(item.DartsInside);
                 item.Join();
             }
 

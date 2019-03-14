@@ -10,6 +10,7 @@ namespace Threads
     {
         int DartsNeeded = 0;
         int DartsThrown { get; }
+        int dartsinside;
         Random newRandom;
 
         public FindPiThread(int dartsneeded)
@@ -20,7 +21,30 @@ namespace Threads
 
         public void ThrowDarts()
         {
-            for (int ctr = 0; ctr <= 100000; ctr++);
+            for (int i = 0; i <= DartsThrown; i++)
+            {
+                double x = newRandom.NextDouble();
+                double y = newRandom.NextDouble();
+                double z = x * x + y * y;
+
+                if (z <= 1)
+                {
+                    dartsinside = dartsinside + 1;
+                }
+
+            }
+        }
+
+        public int DartsInside
+        {
+            get
+            {
+                return dartsinside;
+            }
+            set
+            {
+                dartsinside = value;
+            }
         }
     }
 }
