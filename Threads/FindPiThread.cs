@@ -11,20 +11,19 @@ namespace Threads
     class FindPiThread
     {
         int DartsNeeded = 0;
-        int DartsThrown { get; }
-        int dartsinside;
+        int DartsThrown = 0;
         Random newRandom;
 
         // This funtion is a constructor that creates the random number generator.
         public FindPiThread(int dartsneeded)
         {
             DartsNeeded = dartsneeded;
-            Random random = new Random();
+            newRandom = new Random();
         }
 
         public void ThrowDarts()
         {
-            for (int i = 0; i <= DartsThrown; i++)
+            for (int i = 0; i <= DartsNeeded; i++)
             {
                 double x = newRandom.NextDouble();
                 double y = newRandom.NextDouble();
@@ -32,7 +31,7 @@ namespace Threads
 
                 if (z <= 1)
                 {
-                    dartsinside = dartsinside + 1;
+                    DartsThrown = DartsThrown + 1;
                 }
 
             }
@@ -42,11 +41,11 @@ namespace Threads
         {
             get
             {
-                return dartsinside;
+                return DartsThrown;
             }
             set
             {
-                dartsinside = value;
+                DartsThrown = value;
             }
         }
     }
