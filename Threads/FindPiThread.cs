@@ -15,12 +15,12 @@ namespace Threads
         public FindPiThread(int dartsneeded)
         {
             DartsNeeded = dartsneeded;
-            
+            Random random = new Random();
         }
 
         public void ThrowDarts()
         {
-
+            for (int ctr = 0; ctr <= 100000; ctr++);
         }
     }
 }

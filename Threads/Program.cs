@@ -17,7 +17,25 @@ namespace Threads
             Console.ReadLine();
 
             List<Thread> thread = new List<Thread>();
-            List<FindPiThread> piThreads = new List<FindPiThread>();
+            List<FindPiThread> fpiThread = new List<FindPiThread>();
+
+            foreach()
+            {
+                fpiThread.Add();
+                thread.Add();
+                Thread.Sleep(16);
+            }
+
+            foreach(int item in fpiThread)
+            {
+                Console.WriteLine(item);
+                item.Join();
+            }
+
+            foreach(int item in thread)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
