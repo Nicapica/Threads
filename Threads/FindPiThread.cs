@@ -20,7 +20,7 @@ namespace Threads
             DartsNeeded = dartsneeded;
             newRandom = new Random();
         }
-
+        //this funtions uses the random number generator that we created in the constructor to "throw" the darts
         public void ThrowDarts()
         {
             for (int i = 0; i <= DartsNeeded; i++)
@@ -39,14 +39,8 @@ namespace Threads
 
         public int DartsInside
         {
-            get
-            {
-                return DartsThrown;
-            }
-            set
-            {
-                DartsThrown = value;
-            }
+            get {return DartsThrown;}
+            set {DartsThrown = value;}
         }
     }
 }
