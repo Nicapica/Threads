@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Author: Nicholas Pica
+//File: Program.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,7 @@ namespace Threads
     {
         static void Main(string[] args)
         {
+            // This prompts the user with questions that define how many throws to make per thread and how many threads to run in total.
             Console.WriteLine("How many throws should each thread make?");
             Console.ReadLine();
             Console.WriteLine("How many threads would you like to run?");
@@ -27,6 +30,7 @@ namespace Threads
                 Thread.Sleep(16);
             }
 
+            // This loop runs through every item in the fpiThread list
             foreach(FindPiThread item in fpiThread)
             {
                 int inside = item.DartsInside;
@@ -34,7 +38,8 @@ namespace Threads
                 item.Join();
             }
 
-            foreach(Thread item in thread)
+            // This loop runs through every item in the thread list
+            foreach (Thread item in thread)
             {
                 Console.WriteLine(item);
             }

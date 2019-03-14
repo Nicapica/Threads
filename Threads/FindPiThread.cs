@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Author: Nicholas Pica
+//File: FindPiThread.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,7 @@ namespace Threads
         int dartsinside;
         Random newRandom;
 
+        // This funtion is a constructor that creates the random number generator.
         public FindPiThread(int dartsneeded)
         {
             DartsNeeded = dartsneeded;
